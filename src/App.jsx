@@ -18,7 +18,7 @@ export default function App() {
       try {
         const response = await fetch(searchURL);
         const json = await response.json();
-        console.log(json.data[0]);
+        // console.log(json.data[0]);
         setGif(json.data[0]);
       } catch (error) {
         console.error(error);
