@@ -1,5 +1,12 @@
 import { useState } from "react";
+import GiphySearchForm from "./GiphySearchForm/GiphySearchForm.jsx";
 
 export default function App() {
-  return <div>Hello World</div>;
+  const API_KEY = import.meta.env.VITE_GIPHY_API_KEY;
+
+  return (
+    <>
+      <GiphySearchForm />
+    </>
+  );
 }
