@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import GiphySearchForm from "./GiphySearchForm/GiphySearchForm.jsx";
 import Giphy from "./Giphy/Giphy.jsx";
+import { Box, Typography } from "@mui/material";
+import { WidthFull } from "@mui/icons-material";
 
 export default function App() {
   const [searchPhrase, setSearchPhrase] = useState("");
@@ -32,10 +34,21 @@ export default function App() {
   }
 
   return (
-    <div className="search-container">
-      <h1>Giphy Search</h1>
+    <Box
+      className="search-container"
+      sx={{
+        marginTop: "3vmin",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: 2,
+      }}
+    >
+      <Typography variant="h4" fontWeight="bold">
+        Giphy Search
+      </Typography>
       <GiphySearchForm onSearchPhraseChange={handleSearchPhraseChange} />
       {gif && <Giphy gif={gif} />}
-    </div>
+    </Box>
   );
 }

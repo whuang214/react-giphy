@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { TextField, Button, Box } from "@mui/material";
 
 export default function GiphySearchForm({ onSearchPhraseChange }) {
   const [searchPhrase, setSearchPhrase] = useState("");
@@ -15,9 +16,23 @@ export default function GiphySearchForm({ onSearchPhraseChange }) {
   }
 
   return (
-    <form>
-      <input type="text" value={searchPhrase} onChange={handleChange} />
-      <button onClick={handleSubmit}>Search</button>
-    </form>
+    <Box
+      component="form"
+      onSubmit={handleSubmit}
+      sx={{ display: "flex", gap: 1 }}
+    >
+      <TextField
+        type="text"
+        value={searchPhrase}
+        onChange={handleChange}
+        variant="outlined"
+        label="Search"
+        size="small"
+        sx={{ width: { xs: "100%", m: 320 } }}
+      />
+      <Button type="submit" variant="contained">
+        Search
+      </Button>
+    </Box>
   );
 }
