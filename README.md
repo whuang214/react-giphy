@@ -13,9 +13,9 @@ This is a simple React app that allows users to search for GIFs using the GIPHY 
 
 2. Install the dependencies using `npm install`
 
-3. [https://developers.giphy.com/docs/api/#quick-start-guide](Generate) an API key from the GIPHY API.
+3. Generate an API key from the [GIPHY API](https://developers.giphy.com/docs/api/#quick-start-guide).
 
-4. Open the `.env` file in the project root directory and replace `YOUR_API_KEY` with your actual GIPHY API key.
+4. Create a `.env` file in the project root directory and add `VITE_GIPHY_API_KEY={YOUR_API_KEY}` and replace `YOUR_API_KEY` with your actual GIPHY API key.
 
 5. Start the development server.
 
