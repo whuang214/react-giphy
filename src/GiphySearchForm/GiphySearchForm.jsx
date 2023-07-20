@@ -16,7 +16,7 @@ export default function GiphySearchForm({ onSearchPhraseChange }) {
 
   return (
     <form>
-      <input type="text" onChange={handleChange} />
+      <input type="text" value={searchPhrase} onChange={handleChange} />
       <button onClick={handleSubmit}>Search</button>
     </form>
   );
